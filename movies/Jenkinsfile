@@ -123,7 +123,7 @@ openshift.tag("${DEV_PROJECT}/${APP_NAME}:latest", "${STAGE_PROJECT}/${APP_NAME}
                 echo '### Creating a new app in Staging ###'
 sh '''
 oc project "${STAGE_PROJECT}"
-oc new-app --as-deployment-config --name "${APP_NAME}" -i "${APP_NAME}:latest"
+oc new-app --as-deployment-config --name "${APP_NAME}" -i "${APP_NAME}:stage"
 
 oc expose "svc/${APP_NAME}"
 '''
