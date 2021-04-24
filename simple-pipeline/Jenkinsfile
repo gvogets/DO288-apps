@@ -31,7 +31,7 @@ pipeline {
           steps {
             sh 'echo hello from stage yy'
             timeout(time: 60, unit: 'MINUTES') {
-              input message "Move to stage 3?"
+              input message: "Move to stage 3?"
             }
           }
         }
